@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>500</title>
+</head>
+<body>
+    Something Unexpected Occured.
+    <br>
+    MainMessage: {{ main_message }}
+    <br>
+    StackTrace
+    {% for message in message_stack %}
+    <br>
+    {{ message }}
+    {% endfor %}
+</body>
+</html>
