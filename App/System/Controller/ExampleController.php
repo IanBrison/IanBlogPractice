@@ -15,4 +15,16 @@ class ExampleController extends Controller {
         ];
         return $this->render('welcome', $variables);
     }
+
+    public function getIndex() {
+        return $this->render('index');
+    }
+
+    public function getAbout() {
+        return $this->render('about');
+    }
+
+    public function getPost() {
+        return $this->render('post');
+    }
 }
