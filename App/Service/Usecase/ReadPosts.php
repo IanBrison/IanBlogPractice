@@ -4,7 +4,7 @@ namespace App\Service\Usecase;
 
 use Core\Di\DiContainer as Di;
 use App\Domain\Repository\PostRepository;
-use App\Service\ViewModel\Components\PostItem;
+use App\Service\ViewModel\Top\Components\PostItem;
 
 class ReadPosts {
 

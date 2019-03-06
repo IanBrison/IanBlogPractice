@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\ViewModel\Components;
+namespace App\Service\ViewModel\Top\Components;
 
 use Core\View\ViewModel;
 use App\Domain\Model\Post;
