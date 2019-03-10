@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Clean Blog - Start Bootstrap Theme</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Custom styles for this template -->
+    <style type="text/css">
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Post Content -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <form class="form-inline" method="POST" action="{{ loginPage.formAction }}">
+                {{ loginPage.csrfViewModel.present | raw }}
+                <div class="form-group mb-2">
+                    <label for="staticName" class="sr-only">Name</label>
+                    <input type="text" readonly class="form-control-plaintext" id="staticName" value="Are you Ian?">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="staticPassword" class="sr-only">Password</label>
+                    <input type="password" class="form-control" id="staticPassword" placeholder="Password" name="{{ loginPage.passwordFormName }}">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Yes I am!</button>
+            </form>
+        </div>
+    </div>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
