@@ -19,8 +19,4 @@ class TopController extends Controller {
     public function getAbout() {
         return $this->render('about');
     }
-
-    public function getPost() {
-        return $this->render('post');
-    }
 }
