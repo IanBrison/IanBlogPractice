@@ -9,7 +9,9 @@ use App\Service\Usecase\ReadPosts;
 class TopController extends Controller {
 
     public function getIndex() {
-        $postViewModels = Di::get(ReadPosts::class)->getForTop();
+        $postViewModels = Di::get(ReadPosts::class)
+            ->withLatestPosts()
+            ->getPostItemViewModels();
         $variables = [
             'posts' => $postViewModels,
         ];
