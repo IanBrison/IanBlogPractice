@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Service\ViewModel\Top\Components;
+namespace App\Service\Presenter\Top\Components;
 
-use Core\View\ViewModel;
+use Core\Presenter\ViewModel;
+use Core\Presenter\BasicViewModel;
 use App\Domain\Model\Post;
 
-class PostItem extends ViewModel {
+class PostItem implements ViewModel {
+
+    use BasicViewModel;
 
     protected $template = 'components/post_item';
 

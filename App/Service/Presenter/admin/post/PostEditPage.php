@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Service\ViewModel\Admin\Post;
+namespace App\Service\Presenter\Admin\Post;
 
 use Core\Di\DiContainer as Di;
 use Core\Request\Request;
 use Core\Session\Session;
-use Core\View\ViewModel;
 use App\Service\Usecase\PublishPost;
 
-class PostEditPage extends ViewModel {
+class PostEditPage {
 
     const FORM_ACTION = '/admin/post';
     const TITLE_FORM_NAME = 'title';

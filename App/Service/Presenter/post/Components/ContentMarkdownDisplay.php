@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Service\ViewModel\Post\Components;
+namespace App\Service\Presenter\Post\Components;
 
-use Core\View\ViewModel;
+use Core\Presenter\ViewModel;
+use Core\Presenter\BasicViewModel;
 use App\Domain\Model\Content;
 
-class ContentMarkdownDisplay extends ViewModel {
+class ContentMarkdownDisplay implements ViewModel {
+
+    use BasicViewModel;
 
     protected $template = 'post/components/content_markdown_display';
 

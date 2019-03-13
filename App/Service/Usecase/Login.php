@@ -4,7 +4,7 @@ namespace App\Service\Usecase;
 
 use Core\Di\DiContainer as Di;
 use Core\Session\Session;
-use App\Service\ViewModel\Admin\Auth\LoginPage;
+use App\Service\Presenter\Admin\Auth\LoginPage;
 
 class Login {
 

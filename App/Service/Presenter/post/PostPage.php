@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Service\ViewModel\Post;
+namespace App\Service\Presenter\Post;
 
 use Core\Di\DiContainer as Di;
-use Core\View\ViewModel;
 use App\Domain\Model\Post;
-use App\Service\ViewModel\Post\Components\ContentMarkdownDisplay;
+use App\Service\Presenter\Post\Components\ContentMarkdownDisplay;
 
-class PostPage extends ViewModel {
+class PostPage {
 
     private $post;
 

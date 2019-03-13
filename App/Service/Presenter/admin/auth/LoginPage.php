@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Service\ViewModel\Admin\Auth;
+namespace App\Service\Presenter\Admin\Auth;
 
 use Core\Di\DiContainer as Di;
 use Core\Request\Request;
-use Core\View\ViewModel;
+use Core\Presenter\BasicViewModel;
 
-class LoginPage extends ViewModel {
+class LoginPage {
+
+    use BasicViewModel;
 
     const FORM_ACTION = '/admin/login';
     const PASSWORD_FORM_NAME = 'password';
