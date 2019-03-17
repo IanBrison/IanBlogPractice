@@ -5,8 +5,8 @@ namespace App\Infrastructure\Entity\Post;
 use App\Domain\Model\Post;
 use App\Domain\Model\Content;
 use App\Domain\Model\Date;
-use App\Infrastructure\ValueObject\Content\Content as ContentObject;
-use App\Infrastructure\ValueObject\Date\Date as DateObject;
+use App\Domain\Model\ValueObject\Content\Content as ContentObject;
+use App\Domain\Model\ValueObject\Date\Date as DateObject;
 
 class PublishedPost implements Post {
 

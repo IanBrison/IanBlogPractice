@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\ValueObject\Content;
+namespace App\Domain\Model\ValueObject\Content;
 
 use App\Domain\Model\Content as ContentModel;
 

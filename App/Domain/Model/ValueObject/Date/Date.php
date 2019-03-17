@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\ValueObject\Date;
+namespace App\Domain\Model\ValueObject\Date;
 
 use App\Domain\Model\Date as DateModel;
 
