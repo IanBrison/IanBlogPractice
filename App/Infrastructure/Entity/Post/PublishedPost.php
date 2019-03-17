@@ -3,10 +3,8 @@
 namespace App\Infrastructure\Entity\Post;
 
 use App\Domain\Model\Post;
-use App\Domain\Model\Content;
-use App\Domain\Model\Date;
-use App\Domain\Model\ValueObject\Content\Content as ContentObject;
-use App\Domain\Model\ValueObject\Date\Date as DateObject;
+use App\Domain\Model\ValueObject\Content;
+use App\Domain\Model\ValueObject\Date;
 
 class PublishedPost implements Post {
 
@@ -15,7 +13,7 @@ class PublishedPost implements Post {
     }
 
     public function content(): Content {
-        return new ContentObject();
+        return new Content();
     }
 
     public function isPublished(): bool {
@@ -23,6 +21,6 @@ class PublishedPost implements Post {
     }
 
     public function publishedAt(): Date {
-        return new DateObject();
+        return new Date();
     }
 }

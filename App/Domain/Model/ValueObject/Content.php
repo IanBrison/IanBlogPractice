@@ -1,15 +1,19 @@
 <?php
 
-namespace App\Domain\Model\ValueObject\Content;
+namespace App\Domain\Model\ValueObject;
 
-use App\Domain\Model\Content as ContentModel;
+class Content {
 
-class Content implements ContentModel {
-
+    /*
+     * return the whole content in html
+     */
     public function display(): string {
         return "# Bravel Hi guys. This is a framework that I'm making for some reasons.";
     }
 
+    /*
+     * return the begging of the content in html
+     */
     public function displayBeginning(): string {
         return 'Yeah it is a fantastic post!!';
     }
