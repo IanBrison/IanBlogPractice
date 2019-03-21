@@ -13,9 +13,9 @@ return [
     ],
 
     'locations' => [
-        'example' => [
+        'image' => [
             'driver' => 'Local',
-            'path' => '/example',
+            'path' => '/image',
         ],
     ],
 ];
