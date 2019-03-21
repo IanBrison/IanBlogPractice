@@ -21,8 +21,8 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            {% for postItem in posts %}
-                {{ postItem.present | raw }}
+            {% for postItemPresenter in vm.postPresenters %}
+                {{ postItemPresenter.present | raw }}
             {% endfor %}
             <!-- Pager -->
             <div class="clearfix">

@@ -10,22 +10,6 @@ use App\Service\Presenter\Post\PostPage;
 class ReadPosts {
 
     private $post;
-    private $posts;
-
-    public function withLatestPosts(): self {
-        $this->posts = Di::get(PostRepository::class)->getLatests();
-        return $this;
-    }
-
-    public function getPostItemViewModels(): array {
-        if (is_null($this->posts)) {
-            throw new \Exception("No Posts sepcified in ReadPosts service");
-        }
-        $postViewModels = array_map(function ($post) {
-            return Di::get(PostItem::class, $post);
-        }, $this->posts);
-        return $postViewModels;
-    }
 
     public function withPostById(int $id): self {
         $this->post = Di::get(PostRepository::class)->getById($id);
