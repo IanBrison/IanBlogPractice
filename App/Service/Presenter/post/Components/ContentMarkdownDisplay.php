@@ -4,7 +4,7 @@ namespace App\Service\Presenter\Post\Components;
 
 use Core\Presenter\ViewModel;
 use Core\Presenter\BasicViewModel;
-use App\Domain\Model\Content;
+use App\Domain\Model\ValueObject\Content;
 
 class ContentMarkdownDisplay implements ViewModel {
 
