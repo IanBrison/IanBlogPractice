@@ -3,10 +3,16 @@
 namespace App\Service\Presenter\Post;
 
 use Core\Di\DiContainer as Di;
+use Core\Presenter\ViewModel;
+use Core\Presenter\BasicViewModel;
 use App\Domain\Model\Post;
 use App\Service\Presenter\Post\Components\ContentMarkdownDisplay;
 
-class PostPage {
+class PostPage implements ViewModel{
+
+    use BasicViewModel;
+
+    protected $template = 'post/page';
 
     private $post;
 

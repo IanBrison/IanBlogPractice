@@ -22,12 +22,12 @@
 
 
 <!-- Post Content -->
-<form method="POST" action="{{ postEditPage.formAction }}">
-    {{ postEditPage.csrfViewModel.present | raw }}
+<form method="POST" action="{{ vm.formAction }}">
+    {{ vm.csrfViewModel.present | raw }}
     <div class="container">
-        {% if postEditPage.hasError %}
+        {% if vm.hasError %}
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{ postEditPage.errorMessage }}
+            {{ vm.errorMessage }}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -36,13 +36,13 @@
         <div class="form-group row">
             <label for="inputTitle" class="col-sm-2 col-form-label">タイトル</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputTitle" placeholder="タイトル" name="{{ postEditPage.titleFormName }}" value="{{ postEditPage.preservedTitle }}">
+                <input type="text" class="form-control" id="inputTitle" placeholder="タイトル" name="{{ vm.titleFormName }}" value="{{ vm.preservedTitle }}">
             </div>
         </div>
         <div class="form-group row">
             <label for="inputTitle" class="col-sm-2 col-form-label">中身</label>
             <div class="col-sm-10">
-                <textarea class="form-control" id="inputTitle" placeholder="マークダウン" rows="5" name="{{ postEditPage.contentFormName }}">{{ postEditPage.preservedContent }}</textarea>
+                <textarea class="form-control" id="inputTitle" placeholder="マークダウン" rows="5" name="{{ vm.contentFormName }}">{{ vm.preservedContent }}</textarea>
             </div>
         </div>
         <button class="btn btn-primary" type="submit">Create</button>

@@ -11,10 +11,7 @@ class PostController extends Controller {
     public function getNew() {
         $postEditPageViewModel = Di::get(PublishPost::class)
             ->getPostEditPageViewModel();
-        $variables = [
-            'postEditPage' => $postEditPageViewModel,
-        ];
-        return $this->render('admin/post/page', $variables);
+        return $this->view($postEditPageViewModel);
     }
 
     public function postNew() {

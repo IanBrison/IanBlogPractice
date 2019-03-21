@@ -4,11 +4,14 @@ namespace App\Service\Presenter\Admin\Auth;
 
 use Core\Di\DiContainer as Di;
 use Core\Request\Request;
+use Core\Presenter\ViewModel;
 use Core\Presenter\BasicViewModel;
 
-class LoginPage {
+class LoginPage implements ViewModel {
 
     use BasicViewModel;
+
+    protected $template = 'admin/login/page';
 
     const FORM_ACTION = '/admin/login';
     const PASSWORD_FORM_NAME = 'password';

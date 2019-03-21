@@ -29,15 +29,15 @@
     <!-- Post Content -->
     <div class="container">
         <div class="row justify-content-center">
-            <form class="form-inline" method="POST" action="{{ loginPage.formAction }}">
-                {{ loginPage.csrfViewModel.present | raw }}
+            <form class="form-inline" method="POST" action="{{ vm.formAction }}">
+                {{ vm.csrfViewModel.present | raw }}
                 <div class="form-group mb-2">
                     <label for="staticName" class="sr-only">Name</label>
                     <input type="text" readonly class="form-control-plaintext" id="staticName" value="Are you Ian?">
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                     <label for="staticPassword" class="sr-only">Password</label>
-                    <input type="password" class="form-control" id="staticPassword" placeholder="Password" name="{{ loginPage.passwordFormName }}">
+                    <input type="password" class="form-control" id="staticPassword" placeholder="Password" name="{{ vm.passwordFormName }}">
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Yes I am!</button>
             </form>

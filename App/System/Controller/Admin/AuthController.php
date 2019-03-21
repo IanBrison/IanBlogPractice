@@ -16,10 +16,7 @@ class AuthController extends Controller {
 
         $loginPageViewModel = Di::get(Login::class)
             ->getLoginPageViewModel();
-        $variables = [
-            'loginPage' => $loginPageViewModel,
-        ];
-        return $this->render('admin/login/page', $variables);
+        return $this->view($loginPageViewModel);
     }
 
     public function postLogin() {

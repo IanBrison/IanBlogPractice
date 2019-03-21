@@ -12,9 +12,6 @@ class PostController extends Controller {
         $postPageViewModel = Di::get(ReadPosts::class)
             ->withPostById(0)
             ->getPostPageViewModel();
-        $variables = [
-            'postPage' => $postPageViewModel,
-        ];
-        return $this->render('post/page', $variables);
+        return $this->view($postPageViewModel);
     }
 }

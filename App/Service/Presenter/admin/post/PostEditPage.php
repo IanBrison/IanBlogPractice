@@ -3,11 +3,17 @@
 namespace App\Service\Presenter\Admin\Post;
 
 use Core\Di\DiContainer as Di;
+use Core\Presenter\ViewModel;
+use Core\Presenter\BasicViewModel;
 use Core\Request\Request;
 use Core\Session\Session;
 use App\Service\Usecase\PublishPost;
 
-class PostEditPage {
+class PostEditPage implements ViewModel{
+
+    use BasicViewModel;
+
+    protected $template = 'admin/post/page';
 
     const FORM_ACTION = '/admin/post';
     const TITLE_FORM_NAME = 'title';
