@@ -14,9 +14,9 @@ class AuthController extends Controller {
             return $this->redirect('/admin/post');
         }
 
-        $loginPageViewModel = Di::get(Login::class)
-            ->getLoginPageViewModel();
-        return $this->view($loginPageViewModel);
+        $loginPagePresenter = Di::get(Login::class)
+            ->getLoginPage();
+        return $this->view($loginPagePresenter);
     }
 
     public function postLogin() {

@@ -16,7 +16,7 @@ class ReadPosts {
         return $this;
     }
 
-    public function getPostPageViewModel(): PostPage {
+    public function getPostPage(): PostPage {
         if (is_null($this->post)) {
             throw new \Exception("No Post sepcified in ReadPosts service");
         }

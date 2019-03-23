@@ -9,9 +9,9 @@ use App\Service\Usecase\ReadPosts;
 class PostController extends Controller {
 
     public function getIndex() {
-        $postPageViewModel = Di::get(ReadPosts::class)
+        $postPagePresenter = Di::get(ReadPosts::class)
             ->withPostById(0)
-            ->getPostPageViewModel();
-        return $this->view($postPageViewModel);
+            ->getPostPage();
+        return $this->view($postPagePresenter);
     }
 }

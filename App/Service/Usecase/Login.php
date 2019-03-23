@@ -8,7 +8,7 @@ use App\Service\Presenter\Admin\Auth\LoginPage;
 
 class Login {
 
-    public function getLoginPageViewModel(): LoginPage {
+    public function getLoginPage(): LoginPage {
         return Di::get(LoginPage::class);
     }
 

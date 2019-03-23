@@ -9,7 +9,7 @@ class PublishPost {
 
     const MAX_TITLE_LENGTH = 50;
 
-    public function getPostEditPageViewModel(): PostEditPage {
+    public function getPostEditPage(): PostEditPage {
         return Di::get(PostEditPage::class);
     }
 

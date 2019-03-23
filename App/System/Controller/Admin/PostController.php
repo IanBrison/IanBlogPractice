@@ -9,9 +9,9 @@ use App\Service\Usecase\PublishPost;
 class PostController extends Controller {
 
     public function getNew() {
-        $postEditPageViewModel = Di::get(PublishPost::class)
-            ->getPostEditPageViewModel();
-        return $this->view($postEditPageViewModel);
+        $postEditPagePresenter = Di::get(PublishPost::class)
+            ->getPostEditPage();
+        return $this->view($postEditPagePresenter);
     }
 
     public function postNew() {
