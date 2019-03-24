@@ -3,31 +3,33 @@
 namespace App\Service\Usecase;
 
 use Core\Di\DiContainer as Di;
+use App\Domain\Model\ValueObject\PublishPostErrors;
 use App\Service\Presenter\Admin\Post\PostEditPage;
 
 class PublishPost {
 
     const MAX_TITLE_LENGTH = 50;
 
-    public function getPostEditPage(): PostEditPage {
-        return Di::get(PostEditPage::class);
+    private $publishPostErrors;
+
+    public function __construct() {
+        $this->publishPostErrors = new PublishPostErrors();
     }
 
-    public function createPostFromEditPage(): bool {
-        $postEditPage = Di::get(PostEditPage::class);
-        $title = $postEditPage->retrieveTitle();
+    public function createPostFromEditPage(string $title): bool {
         $titleLength = mb_strlen($title);
         if ($titleLength === 0) {
-            $postEditPage->preserveContent();
-            $postEditPage->setNoTitleErrorMessage();
+            $this->publishPostErrors->addNoTitleError();
             return false;
         }
         if ($titleLength > self::MAX_TITLE_LENGTH) {
-            $postEditPage->preserveTitle();
-            $postEditPage->preserveContent();
-            $postEditPage->setTooLongTitleErrorMessage();
+            $this->publishPostErrors->addTooLongTitleError();
             return false;
         }
         return true;
+    }
+
+    public function retrieveErrors(): PublishPostErrors {
+        return $this->publishPostErrors;
     }
 }
