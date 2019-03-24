@@ -6,6 +6,7 @@ use Core\Di\DiContainer as Di;
 use Core\Controller\Controller;
 use Core\Session\Session;
 use App\Service\Usecase\Login;
+use App\Service\Presenter\Admin\Auth\LoginPage;
 
 class AuthController extends Controller {
 
@@ -14,14 +15,13 @@ class AuthController extends Controller {
             return $this->redirect('/admin/post');
         }
 
-        $loginPagePresenter = Di::get(Login::class)
-            ->getLoginPage();
+        $loginPagePresenter = Di::get(LoginPage::class);
         return $this->view($loginPagePresenter);
     }
 
     public function postLogin() {
-        $loginService = Di::get(Login::class);
-        if (!$loginService->attemptLoginFromLoginPage()) {
+        $password =  Di::get(LoginPage::class)->retrievePassword();
+        if (!Di::get(Login::class)->attemptLoginFromLoginPage($password)) {
             return $this->redirect('/admin/login');
         }
 
