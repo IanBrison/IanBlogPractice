@@ -3,13 +3,14 @@
 namespace App\Infrastructure\Entity\Post;
 
 use App\Domain\Model\Post;
+use App\Domain\Model\ValueObject\Title;
 use App\Domain\Model\ValueObject\Content;
 use App\Domain\Model\ValueObject\Date;
 
 class PublishedPost implements Post {
 
-    public function title(): string {
-        return 'test タイトル';
+    public function title(): Title {
+        return new Title();
     }
 
     public function content(): Content {

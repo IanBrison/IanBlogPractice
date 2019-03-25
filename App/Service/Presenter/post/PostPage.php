@@ -21,7 +21,7 @@ class PostPage implements ViewModel{
     }
 
     public function title(): string {
-        return $this->post->title();
+        return $this->post->title()->display();
     }
 
     public function publishedDate(): string {
