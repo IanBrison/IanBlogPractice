@@ -1,0 +1,20 @@
+{% extends "_base.twig" %}
+
+{% block content %}
+
+<!-- Image List -->
+<div class="container">
+    <div class="overlay"></div>
+    <div class="row">
+        {% for imageUrl in vm.imageUrls %}
+            <div class="col-md-6 col-lg-4 text-center">
+                <img src="{{ imageUrl }}">
+                <p>{{ imageUrl }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<hr>
+
+{% endblock %}
