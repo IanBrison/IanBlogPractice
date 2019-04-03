@@ -1,6 +1,6 @@
 <?php
 
-namespace App\System\Controller;
+namespace App\System\Controller\Admin;
 
 use Core\Di\DiContainer as Di;
 use Core\Controller\Controller;
