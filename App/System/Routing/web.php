@@ -14,7 +14,7 @@ return [
         Router::post('/post', 'Admin\PostController', 'postNew')->withAuth('/admin/login'),
 
         Router::group('/image', [
-            Router::get('/', 'ImageController', 'getList')->withAuth(),
+            Router::get('/', 'Admin\ImageController', 'getList')->withAuth(),
 //            Router::get('/upload', 'ImageController', 'upload')->withAuth(),
         ]),
     ]),
