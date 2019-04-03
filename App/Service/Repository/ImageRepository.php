@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domain\Repository;
+namespace App\Service\Repository;
 
-use App\Domain\Model\Image;
-use App\Domain\Model\ValueObject\Url;
+use App\Model\Read\Image;
+use App\Model\ValueObject\Url;
 
 interface ImageRepository {
 

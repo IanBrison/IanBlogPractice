@@ -5,7 +5,7 @@ namespace App\Service\Presenter\Post;
 use Core\Di\DiContainer as Di;
 use Core\Presenter\ViewModel;
 use Core\Presenter\BasicViewModel;
-use App\Domain\Model\Post;
+use App\Model\Read\Post;
 use App\Service\Presenter\Post\Components\ContentMarkdownDisplay;
 
 class PostPage implements ViewModel{

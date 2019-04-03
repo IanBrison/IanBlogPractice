@@ -3,7 +3,7 @@
 namespace App\Service\Usecase;
 
 use Core\Di\DiContainer as Di;
-use App\Domain\Model\ValueObject\PublishPostErrors;
+use App\Model\ValueObject\PublishPostErrors;
 use App\Service\Presenter\Admin\Post\PostEditPage;
 
 class PublishPost {

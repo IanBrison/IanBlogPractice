@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Model;
+namespace App\Model\Read;
 
-use App\Domain\Model\ValueObject\Title;
-use App\Domain\Model\ValueObject\Content;
-use App\Domain\Model\ValueObject\Date;
+use App\Model\ValueObject\Title;
+use App\Model\ValueObject\Content;
+use App\Model\ValueObject\Date;
 
 interface Post {
 

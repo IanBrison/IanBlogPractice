@@ -3,7 +3,7 @@
 namespace App\Service\Usecase;
 
 use Core\Di\DiContainer as Di;
-use App\Domain\Repository\PostRepository;
+use App\Service\Repository\PostRepository;
 use App\Service\Presenter\Top\Components\PostItem;
 use App\Service\Presenter\Post\PostPage;
 

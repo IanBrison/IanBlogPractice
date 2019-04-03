@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Model\ValueObject;
+namespace App\Model\ValueObject;
 
 class PublishPostErrors {
 

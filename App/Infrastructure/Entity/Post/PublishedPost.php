@@ -2,10 +2,10 @@
 
 namespace App\Infrastructure\Entity\Post;
 
-use App\Domain\Model\Post;
-use App\Domain\Model\ValueObject\Title;
-use App\Domain\Model\ValueObject\Content;
-use App\Domain\Model\ValueObject\Date;
+use App\Model\Read\Post;
+use App\Model\ValueObject\Title;
+use App\Model\ValueObject\Content;
+use App\Model\ValueObject\Date;
 
 class PublishedPost implements Post {
 

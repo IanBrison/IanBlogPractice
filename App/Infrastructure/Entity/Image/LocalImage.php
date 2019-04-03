@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Entity\Image;
 
-use App\Domain\Model\Image;
-use App\Domain\Model\ValueObject\Url;
+use App\Model\Read\Image;
+use App\Model\ValueObject\Url;
 
 class LocalImage implements Image{
 

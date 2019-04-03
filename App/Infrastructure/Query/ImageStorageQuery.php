@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Infrastructure\Dao;
+namespace App\Infrastructure\Query;
 
 use App\Infrastructure\Entity\Image\LocalImage;
 use Core\Di\DiContainer as Di;
 use Core\Storage\Storage;
-use App\Domain\Repository\ImageRepository;
-use App\Domain\Model\Image;
-use App\Domain\Model\ValueObject\Url;
+use App\Service\Repository\ImageRepository;
+use App\Model\Read\Image;
+use App\Model\ValueObject\Url;
 
-class ImageStorageDao implements ImageRepository {
+class ImageStorageQuery implements ImageRepository {
 
     public function getAll(): array {
         $imageStorage = Di::get(Storage::class)->location('image');

@@ -18,7 +18,7 @@ return [
     ],
 
     'aliases' => [
-        App\Domain\Repository\PostRepository::class => App\Infrastructure\Dao\PostDbDao::class,
-        App\Domain\Repository\ImageRepository::class => App\Infrastructure\Dao\ImageStorageDao::class,
+        App\Service\Repository\PostRepository::class => App\Infrastructure\Query\PostDbQuery::class,
+        App\Service\Repository\ImageRepository::class => App\Infrastructure\Query\ImageStorageQuery::class,
     ]
 ];

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Repository;
+namespace App\Service\Repository;
 
-use App\Domain\Model\Post;
+use App\Model\Read\Post;
 
 interface PostRepository {
 

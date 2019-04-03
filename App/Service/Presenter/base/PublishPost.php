@@ -5,7 +5,7 @@ namespace App\Service\Presenter\Base;
 use Core\Di\DiContainer as Di;
 use Core\Request\Request;
 use Core\Session\Session;
-use App\Domain\Model\ValueObject\PublishPostErrors;
+use App\Model\ValueObject\PublishPostErrors;
 use App\Service\Usecase\PublishPost as PublishPostUsecase;
 use App\System\Controller\Admin\PostController;
 

@@ -2,12 +2,12 @@
 
 namespace App\System\Controller;
 
-use App\Service\Presenter\admin\image\ImageListPage;
 use Core\Di\DiContainer as Di;
 use Core\Controller\Controller;
 use Core\Request\Request;
-use App\Domain\Repository\ImageRepository;
+use App\Service\Repository\ImageRepository;
 use App\Service\Usecase\UploadImage;
+use App\Service\Presenter\admin\image\ImageListPage;
 
 class ImageController extends Controller {
 

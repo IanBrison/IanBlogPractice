@@ -5,7 +5,7 @@ namespace App\Service\Presenter\Top;
 use Core\Di\DiContainer as Di;
 use Core\Presenter\ViewModel;
 use Core\Presenter\BasicViewModel;
-use App\Domain\Repository\PostRepository;
+use App\Service\Repository\PostRepository;
 use App\Service\Presenter\Top\Components\PostItem;
 
 class TopPage implements ViewModel{

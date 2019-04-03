@@ -4,7 +4,7 @@ namespace App\Service\Presenter\Top\Components;
 
 use Core\Presenter\ViewModel;
 use Core\Presenter\BasicViewModel;
-use App\Domain\Model\Post;
+use App\Model\Read\Post;
 
 class PostItem implements ViewModel {
 
