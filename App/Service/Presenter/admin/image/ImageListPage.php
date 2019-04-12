@@ -3,11 +3,13 @@
 namespace App\Service\Presenter\admin\image;
 
 use Core\Presenter\ViewModel;
+use Core\Presenter\JsonModel;
 use Core\Presenter\BasicViewModel;
+use Core\Presenter\BasicJsonModel;
 
-class ImageListPage implements ViewModel{
+class ImageListPage implements ViewModel, JsonModel {
 
-    use BasicViewModel;
+    use BasicViewModel, BasicJsonModel;
 
     protected $template = 'admin/image/page';
 

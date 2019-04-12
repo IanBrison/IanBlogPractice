@@ -14,7 +14,7 @@ class ImageController extends Controller {
     public function getList() {
         $images = Di::get(ImageRepository::class)->getAll();
         $imageListPage = Di::get(ImageListPage::class, $images);
-        return $this->view($imageListPage);
+        return $this->json($imageListPage);
     }
 
     public function upload() {
