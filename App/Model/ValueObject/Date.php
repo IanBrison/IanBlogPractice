@@ -2,14 +2,33 @@
 
 namespace App\Model\ValueObject;
 
+use Carbon\Carbon;
+use Exception;
+
 class Date {
 
+    private $carbonDate; // use the carbon library to manipulate the date
+
+    private function __construct(Carbon $carbonDate) {
+    	$this->carbonDate = $carbonDate;
+    }
+
     /*
-     * format could be either
-     * 'Y-m-d' or
-     * 'Y-m-d H:i:s'
+     * the only supported format is YYYY-MM-DD at the moment
      */
-    public function show(string $format): string {
-        return '2019-03-04';
+    public static function create(string $date): self {
+    	try {
+		    $carbonDate = Carbon::createFromFormat('Y-m-d', $date);
+	    } catch (Exception $e) {
+    		throw new Exception("Invalid string date to initialize Date");
+	    }
+    	return new self($carbonDate);
+    }
+
+	/*
+	 * display the date with the YYYY-MM-DD format
+	 */
+	public function display(): string {
+    	return $this->carbonDate->format('Y-m-d');
     }
 }
